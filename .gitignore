@@ -1,0 +1,5 @@
+/vendor/
+/src/Tests/cache
+/src/Tests/logs
+
+.idea/

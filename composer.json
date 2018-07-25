@@ -1,0 +1,28 @@
+{
+    "name": "ed-at-work/ssm-symfony-env",
+    "description": "Retrieve symfony environment variables from AWS SSM Parameter Store.",
+    "type": "symfony-bundle",
+    "require": {
+        "symfony/dependency-injection": "^4.1",
+        "symfony/config": "^4.1",
+        "aws/aws-sdk-php-symfony": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "symfony/framework-bundle": "^4.1",
+        "symfony/yaml": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SSMParameterStoreEnvVar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SSMParameterStoreEnvVar\\": "src/Tests/"
+        },
+        "classmap": [
+            "src/Tests/"
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+services:
+  SSMParameterStoreEnvVar\SSMParameterStoreEnvVarProcessor:
+    tags: ['container.env_var_processor']
+    arguments: ['@aws.ssm']
+

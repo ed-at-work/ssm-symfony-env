@@ -1,0 +1,25 @@
+framework:
+  secret: '%env(ssm:app_secret)%'
+
+parameters:
+  env(testparam1): 'default_value'
+  env(dynamic): '%env(ssm:dynamicspecial)%'
+  regular: '%env(ssm:nondynamic)%'
+
+aws:
+  version: latest
+  region: us-west-2
+
+services:
+  _defaults:
+    public: true
+
+  SSMParameterStoreEnvVar\SSMParameterStoreEnvVarProcessor:
+    tags: ['container.env_var_processor']
+    arguments: ['@aws.ssm']
+
+  Aws\Ssm\SsmClient:
+    arguments:
+      - region: us-west-2
+        version: latest
+    public: true
