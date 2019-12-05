@@ -1,5 +1,6 @@
 /vendor/
 /src/Tests/cache
 /src/Tests/logs
+/var
 
 .idea/

@@ -3,7 +3,7 @@
 namespace SSMParameterStoreEnvVar\Tests;
 
 use AppKernel;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
